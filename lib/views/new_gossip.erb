@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style type="text/css">
+       body {font-family: 'Nunito', sans-serif; text-align:center;}
+       </style>
+    <title>Créer un potin</title>
+  </head>
+  <body>
+    <h1><b>Crée un potin !</b></h1>
+    <h4>Balance ton potin 👇 Confidentialité assurée 😈</h4>
+    <p></p>
+    <form action='/gossips/new/' method='POST'>
+      Ton petit nom :  <input type='text' name='gossip_author'/><br/>
+      On espère que c'est du lourd : <input type='text' name='gossip_content'/><br/>
+      <p></p>
+      <input class="btn btn-warning" type="submit" value="What's in THP stays in THPS">
+    </form>
+  </body>
+</html>

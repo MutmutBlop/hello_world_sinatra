@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Potin n°<%= @id %> 🗣</title>
+  </head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style type="text/css">
+     body {font-family: 'Nunito', sans-serif; text-align:center; vertical-align:center;}
+     </style>
+  <body>
+    <h1><b>Du potin, rien que du potin !</b></h1>
+    <p></p>
+    <p></p>
+    <h2><b>Voilà pour toi le n°<%= @id %></b></h2>
+    <p></p>
+    <p><b>👅 Qui a parlé ?</b><br>
+    👉 <%= Gossip.find(@id)[0] %></p>
+    <p><b>💩 Qu'a dit ce mécréant ?</b><br>
+    👉 <%= Gossip.find(@id)[1] %></p>
+
+    <a class="btn btn-warning" href="/" role="button">Revenir à l'accueil</a>
+  </body>
+</html>
