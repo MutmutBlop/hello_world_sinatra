@@ -2,8 +2,8 @@ require 'gossip'
 
 class ApplicationController < Sinatra::Base
 
-  get '/' do
-    erb :index, locals: {gossips: Gossip.all}
+  get '/' do #appelle la homepage
+    erb :index, locals: {gossips: Gossip.all} #appelle la view index.erb et lui envoie l'array obtenu par Gossip.all
   end
 
   get '/gossips/new/' do
@@ -15,12 +15,9 @@ class ApplicationController < Sinatra::Base
     redirect '/'
   end
 
-  get '/gossips/:id' do
+  get '/gossips/:id' do #lien dynamique avec variable (fonction définie dans gossip.rb)
     @id = params[:id]
     erb :show
-  # matches "GET /hello/foo" and "GET /hello/bar"
-  # params['id'] is 'foo' or 'bar'
-  #"Hello #{params['id']}!"
   end
 
 end
